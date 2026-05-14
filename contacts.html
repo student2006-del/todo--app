@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoApp - Контакти</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background: #eef3fa;
+      color: #2f2f4f;
+    }
+
+
+
+    .skip-link{
+      position: absolute;
+      left: -999px;
+      top: 10px;
+      background: #d26ac2;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .skip-link:focus{
+      left: 10px;
+    }
+
+
+
+    header{
+      padding: 25px;
+      text-align: center;
+    }
+
+    h1{
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle{
+      color: #7c86a2;
+      margin-bottom: 25px;
+    }
+
+
+
+    nav ul{
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a{
+      text-decoration: none;
+      color: #2f2f4f;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+
+    nav a:hover,
+    nav a:focus{
+      color: #d26ac2;
+      outline: none;
+      border-bottom: 2px solid #d26ac2;
+    }
+
+
+
+    main{
+      width: 550px;
+      margin: 40px auto;
+      background: #dde6f1;
+      padding: 35px;
+      border-radius: 12px;
+    }
+
+    section{
+      margin-bottom: 25px;
+    }
+
+    h2{
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    p{
+      color: #5c6680;
+      line-height: 1.7;
+    }
+
+
+
+    form{
+      margin-top: 25px;
+    }
+
+    .form-group{
+      margin-bottom: 20px;
+    }
+
+    label{
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea{
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    textarea{
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    small{
+      display: block;
+      margin-top: 6px;
+      color: #6d7690;
+    }
+
+    button{
+      background: #d26ac2;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover,
+    button:focus{
+      background: #ba56ab;
+      outline: 2px solid #2f2f4f;
+    }
+
+
+
+    footer{
+      text-align: center;
+      padding: 25px;
+      color: #6d7690;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- skip link -->
+
+<a class="skip-link" href="#main">
+  Перейти до основного змісту
+</a>
+
+<!-- header -->
+
+<header>
+
+  <h1>TodoApp</h1>
+
+  <p class="subtitle">
+    Organize your day simply
+  </p>
+
+  <!-- navigation -->
+
+  <nav aria-label="Головна навігація">
+
+    <ul>
+
+      <li>
+        <a href="index.html">
+          Головна
+        </a>
+      </li>
+
+      <li>
+        <a href="topic.html">
+          Завдання
+        </a>
+      </li>
+
+      <li>
+        <a href="contacts.html" aria-current="page">
+          Контакти
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+<!-- main -->
+
+<main id="main">
+
+  <section>
+
+    <h2>Зв’язатися з нами</h2>
+
+    <p>
+      Якщо у вас є запитання або пропозиції щодо TodoApp,
+      заповніть форму нижче.
+    </p>
+
+  </section>
+
+  <!-- form -->
+
+  <form method="post">
+
+    <!-- name -->
+
+    <div class="form-group">
+
+      <label for="name">
+        Ім’я
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+      >
+
+    </div>
+
+    <!-- email -->
+
+    <div class="form-group">
+
+      <label for="email">
+        Ел. пошта
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+      >
+
+    </div>
+
+    <!-- phone -->
+
+    <div class="form-group">
+
+      <label for="phone">
+        Телефон
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="\+380[0-9]{9}"
+        aria-describedby="phone-help"
+        required
+      >
+
+      <small id="phone-help">
+        Формат номера: +380XXXXXXXXX
+      </small>
+
+    </div>
+
+    <!-- message -->
+
+    <div class="form-group">
+
+      <label for="message">
+        Повідомлення
+      </label>
+
+      <textarea
+        id="message"
+        name="message"
+        minlength="10"
+        aria-describedby="message-help"
+        required
+      ></textarea>
+
+      <small id="message-help">
+        Повідомлення повинно містити не менше 10 символів.
+      </small>
+
+    </div>
+
+    <!-- button -->
+
+    <button type="submit">
+      Надіслати
+    </button>
+
+  </form>
+
+</main>
+
+<!-- footer -->
+
+<footer>
+
+  <p>
+    © 2026 TodoApp. Усі права захищені.
+  </p>
+
+  <nav aria-label="Навігація в підвалі">
+
+    <ul>
+
+      <li>
+        <a href="index.html">
+          Головна
+        </a>
+      </li>
+
+      <li>
+        <a href="topic.html">
+          Завдання
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</footer>
+
+</body>
+</html>

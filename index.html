@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoApp - Головна</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background: #eef3fa;
+      color: #2f2f4f;
+    }
+
+    .skip-link{
+      position: absolute;
+      left: -999px;
+      top: 10px;
+      background: #d26ac2;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .skip-link:focus{
+      left: 10px;
+    }
+
+
+    header{
+      padding: 25px;
+      text-align: center;
+    }
+
+    .logo{
+      width: 70px;
+      margin-bottom: 10px;
+    }
+
+    h1{
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle{
+      color: #7c86a2;
+      margin-bottom: 25px;
+    }
+
+    nav{
+      margin-top: 15px;
+    }
+
+    nav ul{
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a{
+      text-decoration: none;
+      color: #2f2f4f;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+
+    nav a:hover,
+    nav a:focus{
+      color: #d26ac2;
+      outline: none;
+      border-bottom: 2px solid #d26ac2;
+    }
+
+
+    main{
+      width: 500px;
+      margin: 40px auto;
+      background: #dde6f1;
+      padding: 35px;
+      border-radius: 12px;
+    }
+
+    section{
+      margin-bottom: 30px;
+    }
+
+    h2{
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    p{
+      line-height: 1.7;
+      color: #5c6680;
+    }
+
+    .start-btn{
+      display: inline-block;
+      margin-top: 20px;
+      background: #d26ac2;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .start-btn:hover,
+    .start-btn:focus{
+      background: #ba56ab;
+      outline: 2px solid #2f2f4f;
+    }
+
+
+    footer{
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #6d7690;
+    }
+
+    footer nav{
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+<a class="skip-link" href="#main">
+  Перейти до основного змісту
+</a>
+
+
+<header>
+
+  <img
+          class="logo"
+          src="https://cdn-icons-png.flaticon.com/512/9068/9068673.png"
+          alt="Логотип TodoApp"
+  >
+
+  <h1>TodoApp</h1>
+
+  <p class="subtitle">
+    Organize your day simply
+  </p>
+
+
+
+  <nav aria-label="Головна навігація">
+
+    <ul>
+
+      <li>
+        <a href="index.html" aria-current="page">
+          Головна
+        </a>
+      </li>
+
+      <li>
+        <a href="topic.html">
+          Завдання
+        </a>
+      </li>
+
+      <li>
+        <a href="contacts.html">
+          Контакти
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+
+<main id="main">
+
+  <section>
+
+    <h2>Ласкаво просимо до TodoApp</h2>
+
+    <p>
+      TodoApp - це простий та зручний застосунок для організації
+      щоденних справ. Ви можете створювати списки завдань,
+      контролювати виконання та планувати свій день.
+    </p>
+
+    <a class="start-btn" href="topic.html">
+      Перейти до завдань
+    </a>
+
+  </section>
+
+  <section>
+
+    <h2>Можливості застосунку</h2>
+
+    <p>
+      У TodoApp можна додавати нові задачі, позначати їх як виконані
+      та переглядати активні або завершені справи. Простий дизайн
+      допомагає швидко орієнтуватися у списку завдань.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    © 2026 TodoApp. Усі права захищені.
+  </p>
+
+  <nav aria-label="Навігація в підвалі">
+
+    <ul>
+
+      <li>
+        <a href="index.html">
+          Головна
+        </a>
+      </li>
+
+      <li>
+        <a href="contacts.html">
+          Контакти
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</footer>
+
+</body>
+</html>
